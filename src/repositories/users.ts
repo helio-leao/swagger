@@ -13,6 +13,8 @@ const users: User[] = [
   },
 ];
 
-export function getUserByUsername(username: string) {
+function getUserByUsername(username: string) {
   return users.find((u) => u.username === username);
 }
+
+export { getUserByUsername };

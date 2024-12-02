@@ -6,15 +6,21 @@ import {
   getProductById,
   updateProduct,
   addProduct,
+  getProductsByName,
 } from "../repositories/products";
 import Product from "../types/Product";
 import { authRole, authToken } from "../middlewares/auth";
 
 const router = Router();
 
-// NOTE: add name query
-router.get("/", (_req, res) => {
-  res.json(getAllProducts());
+router.get("/", (req, res) => {
+  const { name } = req.query;
+
+  if (typeof name === "string") {
+    res.json(getProductsByName(name));
+  } else {
+    res.json(getAllProducts());
+  }
 });
 
 router.get("/:id", (req, res) => {
@@ -25,6 +31,7 @@ router.post("/", authToken, authRole(["admin"]), (req, res) => {
   const newProduct: Product = {
     id: crypto.randomUUID(),
     name: req.body.name,
+    category: req.body.category,
     price: req.body.price,
   };
 
@@ -40,11 +47,16 @@ router.patch("/:id", authToken, authRole(["admin"]), (req, res) => {
     return;
   }
 
-  if (req.body.name) {
-    product.name = req.body.name;
+  const { name, category, price } = req.body;
+
+  if (name) {
+    product.name = name;
   }
-  if (req.body.price) {
-    product.price = req.body.price;
+  if (category) {
+    product.category = category;
+  }
+  if (price) {
+    product.price = price;
   }
 
   updateProduct(product);
