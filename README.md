@@ -11,18 +11,18 @@ The project has three branches that represent different configurations of Swagge
 
 ## Branches
 
-1. **pure-swagger-ui-express**
+1. **main**
 
-   - Implements basic Swagger UI with **express**.
+   - Implements **Swagger UI Express**.
    - Provides a simple interface to interact with the Users and Products APIs.
 
-2. **swagger-ui-express-and-swagger-jsdoc**
+2. **swagger-jsdoc**
 
    - Implements **Swagger UI Express** and **Swagger JSDoc**.
    - Generates API documentation from JSDoc comments within the code.
 
-3. **swaggerautogen**
-   - Implements **SwaggerAutogen** for automatic API documentation generation.
+3. **swagger-autogen**
+   - Implements **Swagger UI Express** and **Swagger Autogen**.
    - Automatically generates the Swagger documentation based on routes and comments.
 
 ---
