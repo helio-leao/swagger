@@ -50,8 +50,8 @@ The project has three branches that represent different configurations of Swagge
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Run `npm install` to install the dependencies.
-4. Choose the branch you want to work on.
+3. Choose the branch you want to work on.
+4. Run `npm install` to install the dependencies.
 5. Run `npm start` to start the server.
 
 ---
