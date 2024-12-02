@@ -10,11 +10,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
+    "@types/swagger-ui-express": "^4.1.7",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
