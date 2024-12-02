@@ -1,0 +1,51 @@
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products/dbcc7332-a271-471e-b399-cc3a0dec8574
+
+###
+
+POST http://localhost:3000/products
+Authorization: Bearer 4843da30e73c126e11b787daff74704a
+Content-Type: application/json
+
+{
+  "name": "Mechanic Keyboard",
+  "price": 500
+}
+
+
+###
+
+PATCH http://localhost:3000/products/dbcc7332-a271-471e-b399-cc3a0dec8574
+Authorization: Bearer 4843da30e73c126e11b787daff74704a
+Content-Type: application/json
+
+{
+  "name": "TV",
+  "price": 2000
+}
+
+###
+
+DELETE  http://localhost:3000/products/f9ba72f1-dfd3-49e1-9b96-d8ec996a7909
+Authorization: Bearer c953b758998f24d7e96da86bef4ead44
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin"
+}
+
+###
+
+POST http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "token": "4843da30e73c126e11b787daff74704a"
+}
